@@ -14,7 +14,7 @@ syn match   i3ChainDelimiter ";"
 syn match   i3Var "\$\w\+"
 
 " Key modifiers
-syn keyword i3KeyModifier Shift Control Ctrl Mod1 Mod2 Mod3 Mod4 Mod5 Mode_switch
+syn keyword i3KeyModifier Shift Control Ctrl Mod1 Mod2 Mod3 Mod4 Mod5 Mode_switch space Escape
 
 " Strings
 syn region  i3SimpleString keepend start='[^ \t]' end='$\|;' contained contains=i3ChainDelimiter,i3Var

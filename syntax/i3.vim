@@ -76,7 +76,8 @@ syn match i3Error ".*$" contained
 
 " Hex color code
 syn match i3ColorLast "#[0-9a-fA-F]\{6\}" contained nextgroup=i3Error skipwhite
-syn match i3Color2nd "#[0-9a-fA-F]\{6\}" contained nextgroup=i3ColorLast skipwhite
+syn match i3Color3rd "#[0-9a-fA-F]\{6\}" contained nextgroup=i3ColorLast skipwhite
+syn match i3Color2nd "#[0-9a-fA-F]\{6\}" contained nextgroup=i3Color3rd skipwhite
 syn match i3Color1st "#[0-9a-fA-F]\{6\}" contained nextgroup=i3Color2nd skipwhite
 
 syn match i3ColorDef1 "client\.background\|statusline\|background\|separator\|statusline" nextgroup=i3ColorLast skipwhite
@@ -95,6 +96,7 @@ highlight link i3DashedParam          Constant
 highlight link i3NoStartupId          Constant
 highlight link i3Color1st             Constant
 highlight link i3Color2nd             Constant
+highlight link i3Color3rd             Constant
 highlight link i3ColorLast            Constant
 highlight link i3WsSpecialParam       Constant
 highlight link i3BordersSpecialParam  Constant

@@ -40,7 +40,7 @@ syn keyword i3GapsParam inner outer current all set plus minus no_gaps
 syn keyword i3PseudoParam no false inactive
 
 " Exec commands
-syn region  i3ExecCommand keepend start='[^ \t]' end='$\|;' contained contains=i3ChainDelimiter,i3Var,i3NoStartupId
+syn region  i3ExecCommand keepend start='[^ \t]' end='$' contained contains=i3ChainDelimiter,i3Var,i3NoStartupId
 syn match   i3QuotedExecCommand '"[^"]\+"' contained
 syn keyword i3ExecKeyword exec exec_always i3bar_command nextgroup=i3QuotedExecCommand,i3ExecCommand skipwhite
 
